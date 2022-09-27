@@ -1,0 +1,15 @@
+{
+  "name": "pact-yard",
+  "version": "1.0.0",
+  "description": "An introduction to contract testing",
+  "author": "Chris Grivas <chgrivas7@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=v16.17.1",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  }
+}
