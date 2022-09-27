@@ -6,15 +6,16 @@ describe('API', () => {
   it('get vehicle by id', async () => {
     // Arrange
     const vehicle = {
-      id: 10,
+      id: '10',
       type: 'escooter',
     }
-    nock(API.BASE_URL)
+    nock(process.env.PROVIDER_BASE_URL)
       .get('/vehicle/10')
       .reply(200, vehicle)
     
     // Act
-    const respVehicle = await API.getVehicle(10)
+    const api = new API(process.env.PROVIDER_BASE_URL)
+    const respVehicle = await api.getVehicle(10)
 
     // Assert
     expect(respVehicle).toEqual(vehicle);
