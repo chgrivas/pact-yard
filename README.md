@@ -4,11 +4,12 @@ A basic contract testing setup for demonstration purposes.
 
 ## Environment setup
 
-Essential tools
+Essentials:
+
 - [nvm](https://github.com/nvm-sh/nvm)
 - [yarn](https://yarnpkg.com/)
 
-You are ready to go if a version check looks like the following examples:
+You are ready to go if a version check looks like the following:
 
 ```bash
 $ nvm --version
@@ -20,14 +21,13 @@ $ yarn --version
 1.22.19
 ```
 
-## Modules
+## The repo structure
 
 ### The Consumer
-Lives in `/consumer` directory. 
 
-It expects an API to be served in order to be consumed safely. 
+Lives in the `consumer` directory. You need to be in the correct directory to act on it. It has its own dependencies and npm scripts. 
 
-Drives the contract by generating it locally and publishing it to the broker.
+The consumer is... consuming an API and "drives" the contract generation and publication.
 
 ```bash
 # Use the correct node version
@@ -43,12 +43,12 @@ yarn
 yarn test
 
 # Publish the contract
-yarn test:pact:publish
+yarn contract:publish
 ```
 
 ## The Provider
 
-Lives in `/provider` directory.
+Lives in the `provider` directory. You need to be in the correct directory to act on it. It has its own dependencies and npm scripts. 
 
 Serves an API. Responsible to verify the contract.
 
@@ -63,8 +63,8 @@ cd provider
 yarn
 
 # Verify the already published contract
-yarn test:pact
+yarn test
 
 # Publish the verification result
-yarn test:pact:publish
+yarn contract:verify
 ```

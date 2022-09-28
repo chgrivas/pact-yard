@@ -13,7 +13,7 @@
     "start": "node src/index.js",
     "dev": "node -r dotenv/config src/index.js",
     "test": "dotenv -e .env jest",
-    "test:pact:publish": "node ./publish-consumer-contracts.js"
+    "contract:publish": "node ./publish-consumer-contracts.js"
   },
   "dependencies": {
     "axios": "^0.27.2"

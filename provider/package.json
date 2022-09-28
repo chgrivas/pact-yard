@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "test:pact": "PACT_PUBLISH=false jest --config=jest.config.js --force-exit",
-    "test:pact:publish": "PACT_PUBLISH=true jest --config=jest.config.js --force-exit"
+    "test": "PACT_PUBLISH=false jest --config=jest.config.js --force-exit",
+    "contract:verify": "PACT_PUBLISH=true jest --config=jest.config.js --force-exit"
   },
   "devDependencies": {
     "@pact-foundation/pact": "^10.0.0",
