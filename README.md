@@ -1,6 +1,6 @@
 # pact-yard
 
-A basic contract testing setup for demonstration purposes.
+A basic contract testing setup for demo purposes.
 
 ## Environment setup
 
@@ -84,7 +84,7 @@ Here are some ideas that can be picked up and implemented:
 1. Create a new consumer.
    - Naming is important. Find a cool, unique name!
    - The consumer should live in the same repository.
-   - Push your consumer to master anytime.
+   - Push your code to master anytime. There is no pipeline for now but let's train our trunk-based development way of thinking. Life is too short to be dealing with conflicts after all.
    - The consumer should consume the `GET /vehicle/:id`.
    - The consumer ONLY cares about the vehicle's license plate.
    - Create a contract locally.
