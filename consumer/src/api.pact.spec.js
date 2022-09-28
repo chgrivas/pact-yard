@@ -4,8 +4,8 @@ const { eachLike, like } = MatchersV3;
 const API = require('./api')
 
 const provider = new PactV3({
-  consumer: "DemoConsumer",
-  provider: "DemoProvider",
+  consumer: "WebApp",
+  provider: "VehicleService",
   log: path.resolve(process.cwd(), "logs", "pact.log"),
   logLevel: "warn",
   dir: path.resolve(process.cwd(), "pacts"),

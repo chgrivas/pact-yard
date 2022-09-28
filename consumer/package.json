@@ -1,7 +1,7 @@
 {
-  "name": "pact-yard",
+  "name": "pact-yard-consumer",
   "version": "1.0.0",
-  "description": "An introduction to contract testing",
+  "description": "A simple consumer example",
   "author": "Chris Grivas <chgrivas7@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -13,7 +13,7 @@
     "start": "node src/index.js",
     "dev": "node -r dotenv/config src/index.js",
     "test": "dotenv -e .env jest",
-    "pact:publish": "node ./publish-consumer-contracts.js"
+    "test:pact:publish": "node ./publish-consumer-contracts.js"
   },
   "dependencies": {
     "axios": "^0.27.2"

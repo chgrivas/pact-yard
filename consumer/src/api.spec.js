@@ -9,12 +9,12 @@ describe('API', () => {
       id: '10',
       type: 'escooter',
     }
-    nock(process.env.PROVIDER_BASE_URL)
+    nock(process.env.PROVIDER_BASE_URL || 'http://localhost:3001')
       .get('/vehicle/10')
       .reply(200, vehicle)
     
     // Act
-    const api = new API(process.env.PROVIDER_BASE_URL)
+    const api = new API(process.env.PROVIDER_BASE_URL || 'http://localhost:3001')
     const respVehicle = await api.getVehicle(10)
 
     // Assert
